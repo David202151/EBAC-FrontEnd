@@ -1,0 +1,219 @@
+/* Estilos CSS para la página de la tienda GYMSHART */
+body{
+    width: 100%;
+    font-size: 15px;
+    font-weight: 300;
+    color: #000000;
+    font-family: 'Lexend', Arial, Helvetica, sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+}
+/* Estilos del header  */
+.header{
+    width: 100%;
+    display: flex;
+    padding: 20px 50px;
+    background-color: #b9b9b9;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+.header__menu, .header__cart{
+    cursor: pointer;
+    display: inline-block;
+    flex: 0 0 auto;
+}
+.header__icon, .header__icon-carrito{
+    width: 6.25rem; 
+}
+
+.header__logo{
+    height: 6.25rem; 
+    width: auto;
+    max-width: 10rem;  
+}
+/* Estilos del banner  */
+.banner{
+    width: 100%;
+    padding: 40px 0;
+    text-align: center;
+    background-image: url(./../img/banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    background-position-y: 50%;
+    box-sizing: border-box; 
+}
+.banner__titulo{
+    width: 100%;
+    font-weight: 700;
+    font-size: 30px;
+    margin: 10px;
+}
+.banner__descripcion{
+    width: 100%;
+    margin: 0 auto;
+    font-size: 25px;
+    opacity: 0.7;
+}
+/* Estilos de los productos  */
+.products {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 80%;
+    margin: 30px auto 0;
+    gap: 30px 20px;
+    
+}
+.products__item {
+    cursor: pointer;
+    background-color: #cacaca;
+    padding: 15px;
+    box-sizing: border-box;
+    margin: 0;
+}
+.products__image {
+    width: 100%;
+}
+.products__title {
+    font-size: .77rem;
+    font-weight: 600;
+    text-align: center;
+    margin: 10px 0;
+}
+.products__price {
+    font-size: .65rem;
+    font-weight: 300;
+    text-align: center;
+    margin: 0;
+}
+/* Estilos del carrito  */
+.cart{
+    width: 500px;
+    background-color: #ffffff;
+    padding: 25px;
+    box-sizing: border-box;
+    height: 100%;
+    position: fixed;
+    right: -500%;
+    top: 100px;    
+    box-shadow: -19px -1px 22px -15px rgba(0,0,0,0.3);
+}
+.cart__header{
+    width: 100%;
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    box-sizing: border-box;
+}
+.cart__title{
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 20px 0;
+    box-sizing: border-box;
+}
+.cart__item{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    box-sizing: border-box;
+}
+.cart__item-image{
+    width: 80px;
+}
+.cart__item-price{
+    font-weight: 600;
+}
+.cart__item-remove{
+    width: 30px;
+    cursor: pointer;
+}
+.cart__item-remove-icon{
+    width: 100%;
+}
+/* MEDIA QUERIES */
+@media (max-width: 820px) {
+    html{
+        font-size: 12px;
+    }
+    header{
+        padding: 15px;
+    }
+    .products{
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    .products__item {
+        box-sizing: border-box;
+        padding: 10px;
+    }
+    .cart{
+        width: 400px;
+        top: 70px;
+    }
+    
+}
+@media (max-width: 480px) {
+    html{
+        font-size: 10px;
+    }
+    .header__icon, .header__icon-carrito{
+        width: 4.25rem; 
+    }
+    .header__logo{
+        height: 4.25rem;  
+    }
+    .banner{
+        padding: 30px; 
+    }
+    .banner__titulo{
+        font-size: 18px;
+    }
+    .banner__descripcion{
+        font-size: 16px;
+    }
+    .products{
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+    .products__title, .products__price {
+        font-size: 1.1rem;
+    }
+    .cart{
+        width: 300px;
+        background-color: #ffffff;
+        padding: 10px;
+    }
+    .cart__header{
+        padding-bottom: 10px;
+    }
+    .cart__title{
+        font-size: 15px;
+        padding: 10px 0;
+    }
+    .cart__item{
+        padding: 10px;
+    }
+    .cart__item-image{
+        width: 100px;
+    }
+    .cart__item-name{
+        font-size: 14px;
+        font-weight: 500;
+    }
+    .cart__item-price{
+        font-size: 12px;
+        font-weight: 600;
+    }
+    .cart__item-remove{
+        width: 30px;
+        cursor: pointer;
+    }
+    .cart__item-remove-icon{
+        width: 100%;
+    }
+} 

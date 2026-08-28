@@ -1,0 +1,23 @@
+html{
+    font-size: 20px;
+}
+main{
+    width: 90%;
+    background-color: rgb(79, 98, 98);
+    margin: 0 auto;
+    font-size: 15px;
+}
+.container-a {
+    width: 45%;
+    background-color: rgb(0, 255, 255);
+    border: 2px solid blue;
+    margin-bottom: 20px;
+    display: inline-block;
+    font-size: 2em;
+}
+.container-b {
+    width: 45%;
+    background-color: rgb(0, 255, 4);
+    display: inline-block;
+    font-size: .5rem;
+}

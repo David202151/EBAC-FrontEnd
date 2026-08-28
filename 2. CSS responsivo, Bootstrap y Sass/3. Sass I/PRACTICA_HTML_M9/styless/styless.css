@@ -1,0 +1,120 @@
+.products .products__item {
+  cursor: pointer;
+  background-color: #b9b9b9;
+  padding: 15px;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.products .products__item .products__title {
+  font-size: 1.47rem;
+  font-weight: 600;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.cart .cart__item-price, .cart .cart__item-name, .products .products__item .products__price {
+  font-size: 1.25rem;
+  font-weight: 300;
+  text-align: center;
+  margin: 0;
+}
+
+body {
+  width: 100%;
+  font-size: 15px;
+  font-weight: 300;
+  color: #000000;
+  font-family: "Lexend", Arial, Helvetica, sans-serif;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  padding: 20px 50px;
+  background-color: #b9b9b9;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+header .header__logo {
+  width: auto;
+  height: 6.25rem;
+  max-width: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .header__icon, header .header__icon-carrito {
+  width: auto;
+  height: 6.25rem;
+  max-width: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner {
+  width: 100%;
+  padding: 40px 0;
+  text-align: center;
+  background-image: url(./../img/banner.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  background-position-y: 50%;
+  box-sizing: border-box;
+}
+.banner .banner__titulo {
+  width: 100%;
+  font-weight: 700;
+  font-size: 30px;
+  margin: 10px;
+}
+.banner .banner__descripcion {
+  width: 100%;
+  margin: 0 auto;
+  font-size: 25px;
+  opacity: 0.7;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+  margin: 40px auto;
+  gap: 30px 20px;
+}
+.products .products__item .products__image {
+  width: 100%;
+}
+.cart {
+  width: 500px;
+  background-color: #ffffff;
+  padding: 25px;
+  box-sizing: border-box;
+  height: 100%;
+  position: fixed;
+  right: -500%;
+  top: 100px;
+  box-shadow: -19px -1px 22px -15px rgba(0, 0, 0, 0.3);
+}
+.cart .cart__item-image {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cart .cart__item-remove, .cart .cart__item-remove-icon {
+  width: 100px;
+  height: auto;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}/*# sourceMappingURL=styless.css.map */

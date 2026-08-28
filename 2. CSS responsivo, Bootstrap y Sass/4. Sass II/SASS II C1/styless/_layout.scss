@@ -1,0 +1,89 @@
+body{
+    font-family: $fontFamily;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+html, body, a, p{
+    margin: 0; 
+}
+header{
+    @include flexbox;
+    background-color: $mainColor; 
+    padding: 20px;
+    box-sizing: border-box;
+    align-items: center;
+    img{
+        width: 75px;
+    }
+    nav{
+        @include flexbox;
+        gap: 10px; 
+        @include laptops{
+            display: none;
+        }
+        a { 
+            font-weight: 500;
+            font-size: 1.2rem;
+            @extend %linkStyle; 
+        }
+    }
+    article{
+        @include flexbox;
+        gap: 10px;
+        transition: all .2s ease;
+        i{
+            cursor: pointer;
+            &:hover{
+                transform: scale(1.08);
+            }
+            &:first-child{
+                width: 24px;
+            }
+            &:last-child{
+                width: 23px;
+            }
+            img{
+                width: 100%;
+            }
+        }
+    }
+}
+footer{
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: $mainColor;
+    @include flexbox;  
+    align-items: center;
+    justify-content: space-between;
+    @include phones{
+        flex-direction: column; 
+        gap: 20px;
+    }
+
+    article{
+        img{
+            width: 150px;
+        }
+        nav{
+            @include flexbox;
+            flex-direction: column;
+            gap: 20px;
+            @include tablets{
+                flex-direction: row; 
+            }
+            @include phones{
+                flex-direction: column; 
+            }
+            a{
+                @extend %linkStyle;
+                font-size: 18px;
+            }
+        }
+        > a {
+                @extend %linkStyle;
+                text-decoration: none;
+            }
+    }
+}

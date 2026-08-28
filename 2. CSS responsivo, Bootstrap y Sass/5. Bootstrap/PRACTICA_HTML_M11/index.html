@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Practica del modulo 11 Bootstrap</title>
+</head>
+<body>
+    <main>
+        <header>
+            <!-- Nav de Bootstrap con el logo de Claude AI -->
+            <nav class="navbar bg-body-tertiary" data-bs-theme="dark">
+            <div class="container">
+                <a class="navbar-brand" href="https://claude.com">
+                <img src="img/claude-ai-icon.svg" alt="Claude AI" width="50" height="50" class="d-inline-block align-text-top">
+                </a>
+            </div>
+            </nav>
+        </header>
+        <article>
+            <!-- Carrusel de imágenes con Bootstrap -->
+            <div id="carouselExampleCaptions" class="carousel slide">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                    <img src="https://cdn.mos.cms.futurecdn.net/SnWyqmbsH5h3PJcvC44zkH-1920-80.jpg  " class="d-block w-100" alt="">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Claude Code</h5>
+                        <p>Claude Code es un asistente de codificación basado en IA de Anthropic, diseñado como una herramienta de línea de comandos (CLI) que actúa directamente en tu terminal.</p>
+                    </div>
+                    </div>
+                    <div class="carousel-item">
+                    <img src="https://st5.depositphotos.com/9999814/82099/i/450/depositphotos_820990902-stock-photo-assistant-brain-processor-llm-technology.jpg" class="d-block w-100" alt="">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Claude AI</h5>
+                        <p>Claude AI es un avanzado chatbot de inteligencia artificial generativa y una familia de modelos de lenguaje (LLM) desarrollados por Anthropic, una startup de seguridad de IA fundada por ex-investigadores de OpenAI.</p>
+                    </div>
+                    </div>
+                    <div class="carousel-item">
+                    <img src="https://imgs.hipertextual.com/wp-content/uploads/2026/01/Claude.jpg" class="d-block w-100" alt="">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Claude Sonnet 4.5</h5>
+                        <p>Claude Sonnet 4.5 es el modelo de IA más avanzado y capaz de Anthropic, optimizado para el uso autónomo de herramientas, programación de alto nivel y la construcción de agentes complejos.</p>
+                    </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+                </div>
+                <!-- Container --> 
+                <div class="container">
+                    <div class="row">
+                        <div class="fs-1" style="color: white;"><strong>Claude AI</strong></div>
+                        <div class="col-4"><p class="fs-6" style="color: white;"><strong>IA Constitucional (Anthropic)</strong><br>Es el método de entrenamiento que hace que la inteligencia artificial Claude sea única. En lugar de solo aprender de humanos, el modelo sigue una "constitución" de principios éticos escrita para evaluar sus propias respuestas; esto garantiza que sea más segura, honesta y menos propensa a generar contenido dañino por cuenta propia.</p></div>
+                        <div class="col-6"><p class="fs-6" style="color: white;"><strong>Medio Interno (Claude Bernard)</strong><br>Es el concepto pilar de la biología que explica que los seres vivos poseen un ambiente fluido interno (sangre y linfa) que se mantiene estable. Gracias a este equilibrio constante, nuestras células pueden funcionar correctamente sin importar si afuera hace frío, calor o si las condiciones del entorno cambian drásticamente.</p></div>
+                    </div>
+                </div>
+                <!-- Acordeon de Bootstrap -->
+                <div class="accordion accordion-flush" id="accordionFlushExample" data-bs-theme="dark">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            IA Constitucional: Ética Automatizada
+                        </button>
+                        </h2>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Es el sistema de valores que guía a la IA Claude. A diferencia de otros modelos, utiliza una "constitución" interna para supervisar su propio comportamiento, asegurando que sus respuestas sean seguras, honestas y alineadas con principios humanos de forma autónoma.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            Medio Interno: El Equilibrio Vital
+                        </button>
+                        </h2>
+                        <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Concepto científico que define el ambiente fluido donde viven nuestras células. Es la capacidad de los organismos para mantener una estabilidad interna constante (como la temperatura o el pH), permitiendo que la vida continúe aunque las condiciones externas sean extremas o cambien.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                            Ventana de Contexto: Memoria de Largo Alcance
+                        </button>
+                        </h2>
+                        <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Es la capacidad técnica de Claude para procesar y recordar una cantidad masiva de información en una sola interacción. Esto le permite analizar documentos extensos, libros completos o bases de datos enteras de una sola vez, manteniendo la coherencia y el detalle sin olvidar lo mencionado al principio de la conversación.</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Text wrapping de Bootstrap-->
+                <section>
+                    <div class="mx-auto p-2" style="width: 200px; padding: 10px; background-color: #0d6efd; border-radius: 5px; text-align: center;">
+                    <div class="badge text-bg-primary text-wrap" style="width: 6rem;">
+                        <a href="detalles.html" style="text-decoration: none; color:white;">Claude Code</a>
+                    </div>
+                </div>
+                </section>
+        </article>
+        <footer class="bg-dark text-white text-center py-3">
+            <p>&copy; 2024 Claude Code. Todos los derechos reservados.</p>
+        </footer>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>

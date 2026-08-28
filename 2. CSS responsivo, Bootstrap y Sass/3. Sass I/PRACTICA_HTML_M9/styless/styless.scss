@@ -1,0 +1,129 @@
+$colorGris: #b9b9b9;
+$colorWite: #ffffff;
+@mixin header($color){
+    width: 100%;
+    display: flex;
+    padding: 20px 50px;
+    background-color: $color;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+@mixin image($width, $height, $max-width){
+    width: $width;
+    height: $height;
+    max-width: $max-width;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin banner($width, $padding, $background-size, $background-position-y){
+    width: $width;
+    padding: $padding;
+    text-align: center;
+    background-image: url(./../img/banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    background-position-y: $background-position-y;
+    box-sizing: border-box;
+}
+@mixin productos($width, $margin){
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: $width;
+    margin: $margin;
+    gap: 30px 20px;
+}
+@mixin carrito($width, $padding, $height, $right, $top){
+    width: $width;
+    background-color: #ffffff;
+    padding: $padding;
+    box-sizing: border-box;
+    height: $height;
+    position: fixed;
+    right: $right;
+    top: $top;    
+    box-shadow: -19px -1px 22px -15px rgba(0,0,0,0.3);
+}
+%item-product{
+    cursor: pointer;
+    background-color: $colorGris; 
+    padding: 15px;
+    box-sizing: border-box;
+    margin: 0;
+}
+%titulo-producto{
+    font-size: 1.47rem;
+    font-weight: 600;
+    text-align: center;
+    margin: 10px 0;
+}
+%titulo-precio {
+    font-size: 1.25rem;
+    font-weight: 300;
+    text-align: center;
+    margin: 0;
+}
+
+body{
+    width: 100%;
+    font-size: 15px;
+    font-weight: 300;
+    color: #000000;
+    font-family: 'Lexend', Arial, Helvetica, sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+}
+header{
+    @include header($colorGris);
+    .header__logo{
+        @include image(auto, 6.25rem, 10rem);
+    }
+    .header__icon, .header__icon-carrito{
+        @include image(auto, 6.25rem, 10rem);
+    }
+}
+.banner{
+    @include banner(100%, 40px 0, cover, 50%);
+    .banner__titulo{
+        width: 100%;
+        font-weight: 700;
+        font-size: 30px;
+        margin: 10px;
+    }
+    .banner__descripcion{
+        width: 100%;
+        margin: 0 auto;
+        font-size: 25px;
+        opacity: 0.7;
+    }
+}
+.products{
+    @include productos(100%, 40px auto);
+    .products__item{
+        @extend %item-product;
+        .products__image{
+            width: 100%;
+        }
+        .products__title {
+            @extend %titulo-producto;
+        }
+        .products__price {
+            @extend %titulo-precio;
+        }
+    }
+}
+.cart{
+    @include carrito(500px, 25px, 100%, -500%, 100px);
+    .cart__item-price, .cart__item-name{
+        @extend %titulo-precio;
+    }
+    .cart__item-image{
+        @include image(100%, auto, 100%);
+    }
+    .cart__item-remove, .cart__item-remove-icon{
+        @include image(100px, auto, 100%);
+        margin: 0 auto;
+    }
+}

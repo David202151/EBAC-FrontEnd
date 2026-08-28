@@ -1,0 +1,128 @@
+*{
+    background-color: #d8d2d2;
+    font-family: "Lexend", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+header {
+    padding: 20px 40px;
+    border: 2px solid #6666;
+    /*Flexbox*/
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-basis: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+header .logo{
+    width: 10%;
+}
+header nav {
+    display: inline;
+    float: right;
+    padding: 3% 5%;
+    background-color: aqua;
+    /*Flexbox*/
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+header nav .redes-sociales {
+    color: #ffffff;
+    text-decoration: none;
+}
+header nav .redes-sociales:active {
+    color: red;
+}
+footer {
+    padding: 20px 40px;
+    border: 2px solid #6666;
+    /*Flexbox*/
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-basis: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+footer nav {
+    display: inline;   
+    padding: 3% 5%;
+    float: right;
+    background-color: aqua;
+    /*Flexbox*/
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+footer .logo{
+    width: 10%; 
+}
+footer nav .redes-sociales {
+    color: #ffffff;
+    text-decoration: none;
+}
+footer nav .redes-sociales:hover {
+    text-decoration: underline;
+    color: black;
+    
+}
+/*Contenido main*/
+main h1{
+    text-align: center;
+    line-height: 2;
+    word-spacing: 10px;
+    text-shadow: 5px 10px 15px #000;
+}
+main section article img{
+    width: 150px;
+}
+main .generaciones{
+    width: 100%;
+    padding: 40px 20px;
+    box-sizing: border-box;
+    text-shadow: 10px 10px 15px #000;
+}
+/*Grid*/
+.pokemons-1ra-generacion{
+    text-align: center;
+    width: 100%;
+    padding: 40px 40px;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.pokemons-2da-generacion {
+    width: 100%;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.pokemons-2da-generacion article {
+    display: flex;
+    align-items: flex-start; 
+    gap: 20px;
+}
+
+.pokemons-2da-generacion article img {
+    width: 150px;
+    flex-shrink: 0; 
+}
+
+.pokemons-2da-generacion article h2,
+.pokemons-2da-generacion article p {
+    margin: 0;
+}
+.pokemons-2da-generacion .info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+

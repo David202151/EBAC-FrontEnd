@@ -1,0 +1,83 @@
+header {
+    padding: 20px 40px;
+    border: 2px dotted #6666;
+}
+header .logo{
+    width: 10%;
+}
+header nav {
+    display: inline;
+    float: right;
+    padding: 3% 5%;
+}
+header nav .youtube {
+    color: #ff0000;
+    text-decoration: none;
+}
+header nav .facebook {
+    color: rgb(0, 85, 255);
+    text-decoration: none;
+}
+header nav .whatsapp {
+    color: rgb(51, 255, 0);
+    text-decoration: none;
+}
+main{
+    width: 90%;
+    margin: 0 auto;
+    font-size: 1rem;
+}
+main article h1{
+    font-family: Arial, sans-serif;
+    text-align: center;
+    line-height: 2;
+    word-spacing: 10px;
+    text-shadow: 5px 10px 15px #000;
+}
+main article h2{
+    font-family: Arial, sans-serif;
+    text-align: justify;
+    text-transform: uppercase;
+}
+main article h3{
+    font-family: Arial, sans-serif;
+    text-align: justify;
+    text-transform: lowercase;
+}
+main article h4{
+    font-family: Arial, sans-serif;
+    text-align: justify;
+    text-transform: capitalize;
+}
+main article p{
+    font-family: Arial, sans-serif;
+    text-align: justify;
+    line-height: 2;
+}
+main article section .last-element{
+    margin-top: 100px;
+}
+footer {
+    padding: 20px 40px;
+    border: 2px solid #6666;
+}
+footer nav {
+    display: inline;   
+    padding: 3% 5%;
+    float: right;
+}
+footer .logo{
+    width: 10%; 
+}
+footer nav .youtube {
+    color: #ff0000;
+    text-decoration: none;
+}
+footer nav .facebook {
+    color: rgb(0, 85, 255);
+    text-decoration: none;
+}
+footer nav .whatsapp {
+    color: rgb(51, 255, 0);
+    text-decoration: none;
+}

@@ -1,0 +1,12 @@
+p {
+    font-family: "Rock 3D", system-ui; 
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    letter-spacing: 2px;
+    text-decoration: none; 
+    text-transform: lowercase;
+    line-height: 3;
+    word-spacing: 20px;
+    text-shadow: 10px 10px 15px #000;
+}

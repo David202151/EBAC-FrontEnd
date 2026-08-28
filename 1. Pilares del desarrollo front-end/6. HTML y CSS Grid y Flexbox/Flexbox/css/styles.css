@@ -1,0 +1,16 @@
+.container{
+    display: flex;
+    padding: 50px;
+    box-sizing: border-box;
+    background-color: lightskyblue;
+    gap: 20px;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.container article{
+    background-color: tan;
+    padding: 5px;
+    box-sizing: border-box;
+    flex-basis: calc(33.33% - 20px);
+}

@@ -1,0 +1,39 @@
+* {
+    font-family: "Rubik Mono One", monospace;
+}
+article {
+    background-color: #8a6e6e;
+}
+p, h1{
+    font-size: 16px;
+}
+
+h1{
+    font-size: 20px;
+}
+.bolt{
+    font-weight: 700;
+}
+
+.btn-main, .main-title {
+    color: #ffffff;
+    background-color: black;
+}
+
+
+article > p {
+    color: yellow;
+}
+input[type="text"]{
+    display: block;
+    background-color: lightblue;
+}
+button:hover{
+    background-color: #d2cece;
+}
+article > p:nth-child(2){
+    background-color: green;
+}
+article > p:last-child{
+    background-color: rgb(39, 40, 39);
+}

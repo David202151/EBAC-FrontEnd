@@ -1,0 +1,79 @@
+body {
+    font-family: "Lexend", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+.header {
+    background-color: #f2f2f2;
+    width: 100%;
+    display: flex;
+    padding: 15px 40px;
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+.header__logo {
+    width: 120px;
+}
+.header__menu{
+    display: flex;
+    gap: 50px;
+}
+.header__nav{
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+.header__link {
+    font-size: .9rem;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+}
+.header__user{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+}
+.header__icon{
+    cursor: pointer;
+}
+.header__icon--secondary{
+    opacity: .4;
+}
+.products {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 80%;
+    margin: 30px auto 0;
+    gap: 30px 20px;
+    
+}
+.products__item {
+}
+.products__img {
+    width: 100%;
+}
+.products__title {
+    font-size: .77rem;
+    font-weight: 600;
+    text-align: center;
+    margin: 10px 0;
+}
+.products__btn{
+    display: block;
+    border: none;
+    background-color: #3c3c3c;
+    color: #ffffff;
+    border-radius: 20px;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    font-weight: 600;
+    font-family: "Lexend", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}

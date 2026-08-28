@@ -1,0 +1,104 @@
+body{
+    font-family: "Lexend", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+}
+img{
+    max-width: 100%;
+}
+button{
+    width: 30%;
+    padding: 10px 0;
+    font-size: 1rem;   
+    border: 1px solid black;
+    color: white;
+    background-color: blueviolet;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.main-container{
+    width: 50%;
+    margin: 0 auto;
+    padding: .7rem;
+    box-sizing: border-box;
+}
+.title{
+    width: 100%;
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 600;
+}
+.text-main{
+    width: 100%;
+    font-size: 1.1rem;
+}
+.main-container h2{
+    width: 100%;
+    font-size: 1rem;
+}
+.main-container p:last-child{
+    width: 100%;
+    font-size: .75rem; 
+    font-weight: 300;
+}
+
+/*@media screen and (max-width: 50em) {
+    .main-container{
+        background-color: aqua;
+        width: 100%;
+    }
+    .title{
+        font-size: 16px;
+    }
+    .text-main, .main-container h2{
+        font-size: 14px;
+    }
+    .main-container p:last-child{
+        font-size: 10px;
+        font-weight: 600;
+    }
+}*/
+@media  screen and (max-width: 50em) {
+    html{
+        font-size: 14px;
+    }
+    .main-container img{
+        width: 100px;
+    }
+
+}
+@media  screen and (max-width: 35em) {
+    html{
+        font-size: 12px;
+    }
+} 
+@media (hover: hover) {
+    button:hover{
+        background-color: rgb(255, 255, 255);
+        color: blueviolet;
+        border: 1px solid blueviolet;
+    }
+}
+@media (prefers-color-scheme: dark) {
+    body{
+        background-color: #000000;
+        color: white;
+    }
+    button{
+        border: 1px solid white;
+        background-color: purple;
+    }
+    button:hover{
+        background-color: white;
+        color: purple;
+        border: 1px solid purple;
+    }
+    
+}
+

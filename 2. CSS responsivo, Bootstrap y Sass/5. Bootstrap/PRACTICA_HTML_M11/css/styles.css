@@ -1,0 +1,23 @@
+article{
+    background-color: #2b3035;
+}
+/* Estilos adiciones para el carrusel de Bootstrap. */
+#carouselExampleCaptions{
+    width: 100%;
+    margin: 0 auto;
+}
+#carouselExampleCaptions img{
+    height: 500px;
+    object-fit: cover;
+}
+/* Estilos adiciones para el contenedor de Bootstrap. */
+.container{
+    margin-top: 20px;
+}
+#accordionFlushExample{
+    padding: 100px;
+}
+
+article > section{
+    padding: 60px;
+}

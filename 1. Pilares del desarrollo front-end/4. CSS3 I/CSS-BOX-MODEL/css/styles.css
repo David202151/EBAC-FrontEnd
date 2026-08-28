@@ -1,0 +1,19 @@
+header {
+    padding: 20px 40px;
+    border: 2px dotted #6666;
+}
+header .logo{
+    width: 100px;
+}
+header nav{
+    display: inline;
+    padding-top: 30px;
+    float: right;
+}
+header nav a {
+    margin: 0 10px;
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+    text-decoration: none;
+}

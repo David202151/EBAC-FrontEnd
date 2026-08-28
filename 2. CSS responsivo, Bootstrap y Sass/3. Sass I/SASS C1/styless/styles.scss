@@ -1,0 +1,81 @@
+$mainColor: rgb(96, 96, 96);
+$fontFamily: "Lexend", sans-serif;
+$colorWhite: white;
+@mixin flexbox{
+    display: flex;
+    justify-content: space-between;
+}
+@mixin shadowContainer($blur, $shadowColor, $bgColor ){
+    box-shadow: 0px 0px $blur $shadowColor;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: $bgColor;
+    margin-bottom: 50px;
+}
+%linkStyle{
+    display: block;
+    color: $colorWhite;
+    text-decoration: none;
+}
+%button{
+    display: block;
+    border: none;
+    border-radius: 30px;
+    color: $colorWhite;
+    text-align: center;
+    padding: 15px 0;
+    width: 100%;
+    font-weight: 600;
+}
+*{
+    font-family: $fontFamily;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+main{
+    article{
+        width: 300px;
+        height: 300px;
+        margin: 0 auto;
+        @include shadowContainer(100px, rgb(83, 124, 72), green);
+        &.mixin{
+            @include shadowContainer(100px, rgb(81, 115, 194), rgb(0, 76, 255));
+        }
+        .main-button{
+            @extend %button; 
+            background-color: chartreuse
+        }
+        .secondary-button{
+            @extend %button;
+            background-color: $mainColor;
+        }
+    }
+}
+footer{
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: $mainColor;
+    @include flexbox;
+    align-items: center;
+
+    article{
+        img{
+            width: 150px;
+        }
+        nav{
+            @include flexbox;
+            flex-direction: column;
+            gap: 20px;
+            a{
+                @extend %linkStyle;
+                font-size: 18px;
+            }
+        }
+        > a {
+                @extend %linkStyle;
+                text-decoration: none;
+            }
+    }
+}

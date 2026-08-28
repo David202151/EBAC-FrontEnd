@@ -1,0 +1,72 @@
+footer article > a, footer article nav a {
+  display: block;
+  color: white;
+  text-decoration: none;
+}
+
+main article .secondary-button, main article .main-button {
+  display: block;
+  border: none;
+  border-radius: 30px;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  width: 100%;
+  font-weight: 600;
+}
+
+* {
+  font-family: "Lexend", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+main article {
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  box-shadow: 0px 0px 100px rgb(83, 124, 72);
+  padding: 10px;
+  border-radius: 10px;
+  background-color: green;
+  margin-bottom: 50px;
+}
+main article.mixin {
+  box-shadow: 0px 0px 100px rgb(81, 115, 194);
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgb(0, 76, 255);
+  margin-bottom: 50px;
+}
+main article .main-button {
+  background-color: chartreuse;
+}
+main article .secondary-button {
+  background-color: rgb(96, 96, 96);
+}
+
+footer {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: rgb(96, 96, 96);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer article img {
+  width: 150px;
+}
+footer article nav {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 20px;
+}
+footer article nav a {
+  font-size: 18px;
+}
+footer article > a {
+  text-decoration: none;
+}/*# sourceMappingURL=styles.css.map */

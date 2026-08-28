@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="js/functions.js" defer></script> 
+    <title>Tienda GYMSHART</title>
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <button class="header__menu-btn menu-icon" aria-label="Abrir menú">
+            <img src="img/menu.svg" alt="Icono Menú" class="header__icon">
+        </button>
+
+        <img src="img/gymshark-logo.png" alt="Logo GYMSHARK" class="header__logo">
+
+        <button class="header__cart-btn cart-icon" aria-label="Abrir carrito">
+            <span class="header__cart-count cart-count">0</span>
+            <img src="img/carrito.png" alt="Icono Carrito" class="header__icon">
+        </button>
+    </header>
+
+    <!-- MENÚ LATERAL -->
+    <nav class="nav-menu menu">
+        <button class="nav-menu__close-btn">
+            <img src="img/close.svg" alt="Cerrar Menú" class="close">
+        </button>
+
+        <div class="nav-menu__brand">
+            <h1 class="nav-menu__title">GYMSHARK</h1>
+            <p class="nav-menu__subtitle txt">Ropa deportiva de alta calidad</p>
+        </div>
+
+        <ul class="nav-menu__list">
+            <li class="nav-menu__item">
+                <button class="nav-menu__btn opciones-menu">
+                    <img src="img/home.svg" alt="Inicio" class="nav-menu__btn-icon">
+                    Inicio
+                </button>
+            </li>
+            <li class="nav-menu__item">
+                <button class="nav-menu__btn opciones-menu">
+                    <img src="img/oversize.svg" alt="Oversize" class="nav-menu__btn-icon">
+                    Oversizes
+                </button>
+            </li>
+            <li class="nav-menu__item">
+                <button class="nav-menu__btn opciones-menu">
+                    <img src="img/camisa-compresion.svg" alt="Camisa" class="nav-menu__btn-icon">
+                    Camisas de compresión
+                </button>
+            </li>
+            <li class="nav-menu__item">
+                <button class="nav-menu__btn opciones-menu">
+                    <img src="img/accesorios.svg" alt="Accesorios" class="nav-menu__btn-icon">
+                    Accesorios
+                </button>
+            </li>
+            <li class="nav-menu__item">
+                <button class="nav-menu__btn opciones-menu">
+                    <img src="img/shorts.svg" alt="Shorts" class="nav-menu__btn-icon">
+                    Shorts
+                </button>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- BANNER -->
+    <section class="banner">
+        <div class="banner__content">
+            <h2 class="banner__title">Productos Nuevos</h2>
+            <p class="banner__subtitle">Conoce nuestros productos nuevos</p>
+        </div>
+    </section>
+
+    <!-- PRODUCTOS -->
+    <section class="products">
+        <article class="products__card promo mouse">
+            <div class="products__img-wrapper">
+                <img src="img/oversize.png" alt="Oversize" class="products__img">
+            </div>
+            <div class="products__info">
+                <h3 class="products__name">Oversize</h3>
+                <p class="products__price">$50 USD</p>
+                <button class="products__btn add-cart">Agregar al carrito</button>
+            </div>
+            <span class="tag"></span>
+        </article>
+        <article class="products__card">
+            <div class="products__img-wrapper">
+                <img src="img/camisa-compresion.jpg" alt="Camisa de compresión" class="products__img">
+            </div>
+            <div class="products__info">
+                <h3 class="products__name">Camisa de compresión</h3>
+                <p class="products__price">$40 USD</p>
+                <button class="products__btn add-cart">Agregar al carrito</button>
+            </div>
+        </article>
+        <article class="products__card promo">
+            <div class="products__img-wrapper">
+                <img src="img/short.jpg" alt="Short" class="products__img">
+            </div>
+            <div class="products__info">
+                <h3 class="products__name">Short</h3>
+                <p class="products__price">$30 USD</p>
+                <button class="products__btn add-cart">Agregar al carrito</button>
+            </div>
+        </article>
+        <article class="products__card">
+            <div class="products__img-wrapper">
+                <img src="img/oversize.png" alt="Oversize" class="products__img">
+            </div>
+            <div class="products__info">
+                <h3 class="products__name">Oversize</h3>
+                <p class="products__price">$50 USD</p>
+                <button class="products__btn add-cart">Agregar al carrito</button>
+            </div>
+        </article>
+        <article class="products__card">
+            <div class="products__img-wrapper">
+                <img src="img/camisa-compresion.jpg" alt="Camisa de compresión" class="products__img">
+            </div>
+            <div class="products__info">
+                <h3 class="products__name">Camisa de compresión</h3>
+                <p class="products__price">$40 USD</p>
+                <button class="products__btn add-cart">Agregar al carrito</button>
+            </div>
+        </article>
+        <article class="products__card">
+            <div class="products__img-wrapper">
+                <img src="img/short.jpg" alt="Short" class="products__img">
+            </div>
+            <div class="products__info">
+                <h3 class="products__name">Short</h3>
+                <p class="products__price">$30 USD</p>
+                <button class="products__btn add-cart">Agregar al carrito</button>
+            </div>
+        </article>
+        <article class="products__card">
+            <div class="products__img-wrapper">
+                <img src="img/oversize.png" alt="Oversize" class="products__img">
+            </div>
+            <div class="products__info">
+                <h3 class="products__name">Oversize</h3>
+                <p class="products__price">$50 USD</p>
+                <button class="products__btn add-cart">Agregar al carrito</button>
+            </div>
+        </article>
+        <article class="products__card">
+            <div class="products__img-wrapper">
+                <img src="img/camisa-compresion.jpg" alt="Camisa de compresión" class="products__img">
+            </div>
+            <div class="products__info">
+                <h3 class="products__name">Camisa de compresión</h3>
+                <p class="products__price">$40 USD</p>
+                <button class="products__btn add-cart">Agregar al carrito</button>
+            </div>
+        </article>
+        <article class="products__card">
+            <div class="products__img-wrapper">
+                <img src="img/short.jpg" alt="Short" class="products__img">
+            </div>
+            <div class="products__info">
+                <h3 class="products__name">Short</h3>
+                <p class="products__price">$30 USD</p>
+                <button class="products__btn add-cart">Agregar al carrito</button>
+            </div>
+        </article>
+    </section>
+
+    <!-- CARRITO -->
+    <aside class="cart">
+        <h2 class="cart__title">CARRITO</h2>
+    </aside>
+    <!-- FORMULARIO -->
+    <article class ="form">
+        <h1 class="title-sc">CONTACTO</h1>
+        <button type="submit" class="btn-form show-form">Mostar Formulario</button>
+        <button type="submit" class="btn-form toggle-form">Toggle Formulario</button>
+        <form action="" class="formulario" style="display: none;"> 
+            <input type="text" placeholder="Nombre" value="David" class="formulario__name">
+            <input type="text" placeholder="Email">
+            <input type="text" placeholder="No. Orden">
+            <textarea cols="30" rows="10" placeholder="Comentarios"></textarea>
+            <input type="button"value="Enviar">
+        </form>
+        <button class="btn-form hide-form">Ocultar Form</button>
+    </article>
+    <article class="modal" style="display: none;">
+        <i>X</i>
+        <h3>Soy un modal</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </article>
+    
+
+</body> 
+</html>

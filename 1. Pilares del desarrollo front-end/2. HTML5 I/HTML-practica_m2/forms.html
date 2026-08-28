@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de HTML</title>
+</head>
+<body>
+    <form action="">
+        <fieldset>
+            <legend>Datos del futuro programador</legend>
+            <div>
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" placeholder="Ingresa tu Nombre" required>
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Ingresa tu Email" required>
+            </div>
+            <div>
+                <label for="birthdate">Fecha de nacimiento:</label>
+                <input type="date" id="birthdate" name="birthdate" required>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Lenguage de programacion favorito:</legend>
+            <div>
+                <label>lenguajes de programacion</label>
+                <select required>
+                    <option value="">-- Selecciona una opcion--</option>
+                    <option value="python">Python</option>
+                    <option value="java">Java</option>
+                    <option value="cpp">C++</option>
+                    <option value="csharp">#C</option>
+                </select>
+            </div>
+            <div>
+                <label for="detalles">Razones del porque te gusta:</label>
+                <textarea placeholder="Ingresa detalles adicionales" id="detalles" required></textarea>
+            </div>
+            <div>
+                <label for="experiencia">Años de experiencia:</label>
+                <input type="number" id="experiencia" required>
+            </div>
+            <div>
+                <label for="gusto">Nivel de gusto del 1 al 10:</label>
+                <input type="range" min="0" max="10" id="gusto" required>
+            </div>
+        </fieldset>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html> 
