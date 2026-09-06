@@ -1,0 +1,47 @@
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #000000;
+    color: white;
+  }
+  body .card {
+    color: #000000;
+  }
+}
+.card--product {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  max-width: 300px;
+  margin: 0 auto;
+  transition: transform 0.3s ease;
+}
+.card--product:hover {
+  transform: scale(1.05);
+}
+.card--product img {
+  width: 100%;
+  height: auto;
+}
+.card--product__content {
+  padding: 1em;
+}
+.card--product__content h3 {
+  margin: 0;
+  font-size: 1.2em;
+}
+.card--product__content p {
+  color: #555;
+}
+.card--product__content button {
+  background-color: #3498db;
+  color: #fff;
+  padding: 0.5em 1em;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.card--product__content button:hover {
+  background-color: #2980b9;
+}/*# sourceMappingURL=styless.css.map */
