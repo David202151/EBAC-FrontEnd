@@ -1,0 +1,100 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  min-height: 100vh;
+  color: #eaeaea;
+}
+
+.App {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+header {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 24px 32px;
+  margin-bottom: 32px;
+  text-align: center;
+  backdrop-filter: blur(6px);
+}
+
+header h1 {
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+  background: linear-gradient(90deg, #e94560, #f5a623);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+section {
+  margin-bottom: 32px;
+}
+
+section h2 {
+  font-size: 1.4rem;
+  margin-bottom: 16px;
+  color: #f5a623;
+  border-left: 4px solid #e94560;
+  padding-left: 12px;
+}
+
+.search-results,
+.library {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.song {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.song:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  border-color: #f5a623;
+}
+
+.song h3 {
+  color: #ffffff;
+  font-size: 1.1rem;
+}
+
+.song p {
+  color: #b3b3c9;
+  font-size: 0.9rem;
+}
+
+.song button {
+  margin-top: auto;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: #e94560;
+  color: #ffffff;
+  transition: background 0.2s ease;
+}
+
+.song button:hover {
+  background: #c8354c;
+}

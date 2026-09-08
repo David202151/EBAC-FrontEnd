@@ -1,17 +1,24 @@
-import React from 'react';
-const SearchResults = (props) => {
-    super(props);
-    const { results } = props;
-    results.map((result) => {
-        const { id, title, artist, duration } = result;
-        return (
-            <article key={id}>
-                <h3>{title}</h3>
-                <p>{artist}</p>
-                <p>{duration}</p>
-            </article>
-        );
-    });
-};
+import Song from '../Song';
+
+const SearchResults = ({results, onAdd}) => {
+    return(
+        <section className="search-results">
+            <h2>Resultados de la búsqueda</h2>
+            {results.map(song => {
+                return(
+                    <Song className="search-result"
+                        key={song.id}
+                        title={song.title}
+                        artist={song.artist}
+                        duration={song.duration}
+                        year={song.year}
+                        onAdd={onAdd}
+                    />
+                )
+            })
+        }
+        </section>
+    ); 
+}; 
 
 export default SearchResults;

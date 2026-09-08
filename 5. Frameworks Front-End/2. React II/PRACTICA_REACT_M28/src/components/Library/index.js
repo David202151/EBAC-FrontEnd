@@ -1,17 +1,24 @@
-import React from 'react';
-const Library = (props) => {
-    super(props);
-    const { results } = props;
-    results.map((result) => {
-        const { id, title, artist, duration } = result;
-        return (
-            <article key={id}>
-                <h3>{title}</h3>
-                <p>{artist}</p>
-                <p>{duration}</p>
-            </article>
-        );
-    });
-};
+import Song from "../Song";
+
+const Library = ({ results }) => {
+    return(
+        <section className="library">
+            <h2>Biblioteca Musical</h2>
+            {
+                results.map(song => {
+                    return(
+                        <Song 
+                        key={song.id}
+                        title={song.title}
+                        artist={song.artist}
+                        duration={song.duration}
+                        year={song.year}
+                        />
+                    ); 
+                })
+            }
+        </section>
+    ); 
+}; 
 
 export default Library;
