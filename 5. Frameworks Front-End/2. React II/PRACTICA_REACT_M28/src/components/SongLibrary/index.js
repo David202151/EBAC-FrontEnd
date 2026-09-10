@@ -1,14 +1,11 @@
 
-const Song =({id, title, artist, duration, year, onAdd}) => {
+const Song =({id, title, artist, duration, year}) => {
   return (
     <article className="song" key={id}>
         <h3>{title}</h3>
         <p>Artista: {artist}</p>
         <p>Duración: {duration}</p>
         <p>Año: {year}</p>
-        <button onClick={() => onAdd({ id, title, artist, duration, year })}>
-            Agregar a mi biblioteca
-        </button>
     </article>
   );
 }

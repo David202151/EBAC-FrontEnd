@@ -26,21 +26,6 @@ const songs = [
     { id: 19, title: "Should've Been Me", artist: "Mitski", duration: "3:14", year: 2022 },
     { id: 20, title: "Bug Like an Angel", artist: "Mitski", duration: "3:34", year: 2023 }
 ];
-/*
-const librarySongs = [
-    { id: 21, title: "Fiesta Pagana", artist: "Mägo de Oz", duration: "4:56", year: 2000 },
-    { id: 22, title: "Numb", artist: "Linkin Park", duration: "3:07", year: 2003 },
-    { id: 23, title: "In the End", artist: "Linkin Park", duration: "3:36", year: 2000 },
-    { id: 24, title: "The Pretender", artist: "Foo Fighters", duration: "4:29", year: 2007 },
-    { id: 25, title: "Bring Me to Life", artist: "Evanescence", duration: "3:56", year: 2003 },
-    { id: 26, title: "Mr. Brightside", artist: "The Killers", duration: "3:42", year: 2003 },
-    { id: 27, title: "Boulevard of Broken Dreams", artist: "Green Day", duration: "4:21", year: 2004 },
-    { id: 28, title: "Sweet Child o' Mine", artist: "Guns N' Roses", duration: "5:56", year: 1987 },
-    { id: 29, title: "Everlong", artist: "Foo Fighters", duration: "4:10", year: 1997 },
-    { id: 30, title: "Zombie", artist: "The Cranberries", duration: "5:06", year: 1994 }
-];
-*/
-
 
 function App() {
 

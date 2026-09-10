@@ -1,4 +1,4 @@
-import Song from "../Song";
+import SongLibrary from "../SongLibrary";
 
 const Library = ({ results }) => {
     return(
@@ -7,7 +7,7 @@ const Library = ({ results }) => {
             {
                 results.map(song => {
                     return(
-                        <Song 
+                        <SongLibrary className="library-song" 
                         key={song.id}
                         title={song.title}
                         artist={song.artist}
