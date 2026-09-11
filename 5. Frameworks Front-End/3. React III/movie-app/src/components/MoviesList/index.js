@@ -1,27 +1,9 @@
-import React, { Fragment, useState, useEffect } from "react"; 
-import axios from "axios";
-const MoviesList = () => {
-    const [movies, setMovies] = useState([]);
-    const [error, setError] = useState(null);
-    const [loading, setLoading] = useState(true);
-    useEffect(() => { 
-        const fetchMovies = async () =>{
-            try {
-                const response = await axios.get(
-                    'https://api.themoviedb.org/3/movie/popular?api_key=4801d4344bbf19abbe3fff7849117a6c'
-                ); 
-                console.log(response); 
-                setMovies(response.data.results);
-                setLoading(false);
-            } catch (error) {
-                console.error('Error fetching movies:', error);
-                setError(error);
-                setLoading(false);
-            }
-        }
+import React, { Fragment } from "react"; 
+import useFetchMovies from "../Hooks/useFetchMovies"; // Custom Hook
+// Custom Hooks -----> DRY Don´t repeat yourself, use custom hooks to avoid code repetition
 
-        fetchMovies();
-    }, []);
+const MoviesList = () => {
+    const {movies, isLoading, error} = useFetchMovies(); // Custom Hook
 
     const renderMovies = () => (
         <section>
@@ -42,7 +24,7 @@ const MoviesList = () => {
     ); 
 
     const renderContent = () => {
-        if (loading) return <p>Cargando películas...</p>;
+        if (isLoading) return <p>Cargando películas...</p>;
         if (error) return <p>Ocurrió un error al cargar las películas.</p>;
         return renderMovies();
     }
