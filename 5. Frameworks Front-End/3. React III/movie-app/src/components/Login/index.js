@@ -1,18 +1,22 @@
-import {React, useState} from 'react'; 
+import React, {useState} from 'react'; 
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
+    const navigate = useNavigate();
     const [form, setForm] = useState({
         userName: '',
         password: ''
     }); 
+    const [error, setError] = useState(null);
     const USERNAME = 'admin';
     const PASSWORD = 'admin';
     const handleSubmit = (e) => {
         e.preventDefault();
         if(form.userName === USERNAME && form.password === PASSWORD){
             alert('Login successful');
+            navigate('/movies');
         }else{
-            alert('Login failed');
+            setError('Invalid username or password');
         }
     }; 
     const handleInputChange =  (e) => {
@@ -45,6 +49,7 @@ const Login = () => {
                 </div>
                 <button type="submit">Login</button>
         </form>
+        {error && <p style={{color: 'red'}}>{error}</p>}
         </section>
     ); 
 }; 

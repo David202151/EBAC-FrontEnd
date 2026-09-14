@@ -1,5 +1,6 @@
 import React, { Fragment } from "react"; 
 import useFetchMovies from "../Hooks/useFetchMovies"; // Custom Hook
+import Header from "../Header";
 // Custom Hooks -----> DRY Don´t repeat yourself, use custom hooks to avoid code repetition
 
 const MoviesList = () => {
@@ -30,6 +31,7 @@ const MoviesList = () => {
     }
     return (
         <Fragment>
+            <Header appName="Movie App"/>
             <h2>Peliculas</h2>
             {
                 renderContent()
