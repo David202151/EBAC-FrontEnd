@@ -3,7 +3,7 @@ import useFetch from '../Hooks/useFetch';
 import Song from '../Song';
 const SongDetail = () => {
     
-    const { id } = useParams(); 
+    const { id } = useParams();
     const url = `https://www.theaudiodb.com/api/v1/json/2/album.php?m=${id}`;
     console.log(url); 
     const { data, isLoading, error } = useFetch(url);
