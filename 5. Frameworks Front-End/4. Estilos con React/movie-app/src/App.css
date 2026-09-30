@@ -1,0 +1,38 @@
+/* =========================================================
+   App.css — estilos globales y variables de la aplicación
+   Se importa una sola vez en App.js; las variables (--color-*)
+   quedan disponibles para las hojas de cada componente.
+   ========================================================= */
+
+:root {
+    --color-bg: #0f1115;          /* fondo general (tono "sala de cine") */
+    --color-surface: #1a1d24;     /* tarjetas, formularios, header */
+    --color-surface-alt: #242833; /* inputs, hover */
+    --color-text: #e8eaed;
+    --color-text-muted: #9aa0a6;
+    --color-accent: #2fedbf;      /* el color que ya usabas en el Login */
+    --color-accent-dark: #1fc49c;
+    --color-error: #ff5c5c;
+
+    --radius: 10px;
+    --shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+    --font-base: 'Segoe UI', Arial, Helvetica, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-base);
+    line-height: 1.5;
+}
+
+.app {
+    min-height: 100vh;
+}

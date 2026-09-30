@@ -1,0 +1,53 @@
+@charset "UTF-8";
+/* =========================================================
+   Header.css — bloque BEM: .header
+   ========================================================= */
+.header {
+  position: sticky; /* se queda fijo arriba al hacer scroll */
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 32px;
+  background-color: var(--color-surface);
+  border-bottom: 2px solid var(--color-accent);
+  box-shadow: var(--shadow);
+}
+
+.header__title {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--color-accent);
+}
+
+.header__nav {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--color-text-muted); /* color del separador "|" */
+}
+
+.header__link {
+  color: var(--color-text);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: var(--radius);
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.header__link:hover {
+  background-color: var(--color-surface-alt);
+  color: var(--color-accent);
+}
+
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    gap: 8px;
+    padding: 12px 16px;
+  }
+}/*# sourceMappingURL=Header.css.map */
