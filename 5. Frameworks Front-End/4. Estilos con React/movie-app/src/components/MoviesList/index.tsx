@@ -2,6 +2,7 @@ import React, { Fragment } from "react";
 import useFetchMovies from "../Hooks/useFetchMovies"; // Custom Hook
 import Header from "../Header";
 import './MoviesList.css';
+import { AppButton } from "./styles";
 // Custom Hooks -----> DRY Don´t repeat yourself, use custom hooks to avoid code repetition
 
 const MoviesList = () => {
@@ -19,6 +20,7 @@ const MoviesList = () => {
                     <h3 className="movies__name">{title}</h3>
                     <p className="movies__info movies__info--rating"> Puntuación: {vote_average}</p>
                     <p className="movies__info"> Fecha de estreno: {release_date}</p>
+                    <AppButton> Ver detalles</AppButton>
                     </article>
                     );
             })

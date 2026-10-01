@@ -17,6 +17,8 @@
     "react-router-dom": "^7.18.3",
     "react-scripts": "5.0.1",
     "sass": "^1.105.1",
+    "styled-components": "^6.5.3",
+    "styled-reset": "^5.0.0",
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
   },
