@@ -63,7 +63,7 @@ export default Login;
 /* TYPESCRIPT */
 import React, {useState} from 'react'; 
 import { useNavigate } from 'react-router-dom';
-import './Login.css'; 
+//import './Login.css'; 
 
 type FormState = {
     userName: string; 
@@ -92,12 +92,12 @@ const Login = () => {
         const {name, value} = e.target; 
         setForm(prev => ({...prev, [name]: value }));
     }
-    const inputClass = `login__input${error ? ' login__input--error' : ''}`;
+    const inputClass = `text-gray-700 border border-gray-300 rounded px-3 py-2 w-full ${error ? 'border-red-500' : ''}`;
     return(
-        <section className="login">
-            <h2 className="login__title">Login Movie App</h2>
-            <form className="login__form" onSubmit={handleSubmit}>
-                <div className="login__field">
+        <section className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
+            <h2 className="text-2xl font-bold mb-4">Login Movie App</h2>
+            <form className="bg-white p-6 rounded shadow" onSubmit={handleSubmit}>
+                <div className="block mb-4 login__field text-gray-700">
                     <label className="login__label" htmlFor="username">Username:</label>
                     <input
                         id="username" 
@@ -108,7 +108,7 @@ const Login = () => {
                         onChange={(e) => handleInputChange(e)}
                     />
                 </div>
-                <div className="login__field">
+                <div className="block mb-4 login__field text-gray-700">
                     <label className="login__label" htmlFor="password">Password:</label>
                     <input
                         id="password"
@@ -119,9 +119,9 @@ const Login = () => {
                         onChange={(e) => handleInputChange(e)}
                     />
                 </div>
-                <button className="login__button" type="submit">Login</button>
+                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full" type="submit">Login</button>
         </form>
-        {error && <p className="login__error">{error}</p>}
+        {error && <p className="text-red-500">{error}</p>}
         </section>
     ); 
 }; 
