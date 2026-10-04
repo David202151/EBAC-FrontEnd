@@ -2,30 +2,30 @@ import React, { Fragment } from "react";
 import useFetchMovies from "../Hooks/useFetchMovies"; // Custom Hook
 import Header from "../Header";
 import './MoviesList.css';
-import { AppButton } from "./styles";
+import { AppButton, MovieElement, MovieImage, MovieInfo, MovieSection, MovieTitle } from "./styles";
 // Custom Hooks -----> DRY Don´t repeat yourself, use custom hooks to avoid code repetition
 
 const MoviesList = () => {
     const {movies, isLoading, error} = useFetchMovies(); // Custom Hook
 
     const renderMovies = () => (
-        <section className="movies__grid">
+        <MovieSection>
         {
             movies.map((movie) => {
             const {id, title, vote_average, poster_path, release_date} = movie;
                 return (
-                    <article className="movies__card" key={id}>
+                    <MovieElement key={id}>
                     {/* El ancho ahora lo controla .movies__poster (antes width="200px") */}
-                    <img className="movies__poster" src={`https://image.tmdb.org/t/p/w500${poster_path}`} alt={title} />
-                    <h3 className="movies__name">{title}</h3>
-                    <p className="movies__info movies__info--rating"> Puntuación: {vote_average}</p>
-                    <p className="movies__info"> Fecha de estreno: {release_date}</p>
+                    <MovieImage src={`https://image.tmdb.org/t/p/w500${poster_path}`} alt={title} />
+                    <MovieTitle>{title}</MovieTitle>
+                    <MovieInfo score={vote_average}> Puntuación: <span>{vote_average}</span></MovieInfo>
+                    <MovieInfo releaseDate={release_date}> Fecha de estreno: <span>{release_date}</span></MovieInfo>
                     <AppButton> Ver detalles</AppButton>
-                    </article>
+                    </MovieElement>
                     );
             })
         }
-        </section>
+        </MovieSection>
     );
 
     const renderContent = () => {
