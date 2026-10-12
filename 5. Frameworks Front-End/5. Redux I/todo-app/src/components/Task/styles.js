@@ -1,13 +1,32 @@
-import react from 'react';
-import { RemoveButton, TaskContainer, TaskText } from '.';
+import styled from "styled-components";
 
-const Task = ({ task }) => {
-  return (
-    <TaskContainer>
-      <TaskText>{task.text}</TaskText>
-      <RemoveButton>Remove</RemoveButton>
-    </TaskContainer>
-  );
-};
+const TaskContainer = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+`;
 
-export default Task;
+const TaskText = styled.p`
+    margin: 0;
+    font-size: 1rem;
+    text-decoration: ${props => props.completed ? 'line-through' : 'none'};
+`;
+
+const RemoveButton = styled.button`
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    &:hover {
+        background-color: #c82333;
+    }
+`;
+
+export { TaskContainer, TaskText, RemoveButton };

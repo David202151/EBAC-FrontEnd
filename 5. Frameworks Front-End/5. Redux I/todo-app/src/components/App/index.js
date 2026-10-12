@@ -1,5 +1,6 @@
 
 import AddTaskForm from "../AddTaskForm";
+import TaskList from "../TaskList";
 import { AppContainer, AppHeader, HeaderTitle } from "./styles";
 
 const App = () => {
@@ -9,6 +10,7 @@ const App = () => {
         <HeaderTitle>Todo List App</HeaderTitle>
       </AppHeader>
       <AddTaskForm />
+      <TaskList />
     </AppContainer>
   );
 }
