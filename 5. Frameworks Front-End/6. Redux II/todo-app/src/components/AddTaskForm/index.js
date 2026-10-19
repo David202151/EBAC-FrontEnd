@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import { FormContainer, Input, Button } from './styles';
 import { useDispatch } from 'react-redux';
-import { addTask } from '../../actions';
+import { addTask } from '../../state/tasks.slice';
 
 const AddTaskForm = () => {
     const [formTask, setFormTask] = useState('');
@@ -13,8 +13,13 @@ const AddTaskForm = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         if(formTask.trim() === '') return;
-        dispatch(addTask(formTask));
-        console.log('Tarea agregada:', formTask);
+        const newTask = {
+            id: Date.now(),
+            name: formTask,
+            completed: false
+        }
+        dispatch(addTask(newTask));
+        console.log('Tarea agregada:', newTask.name);
         setFormTask('');
     }
     return (

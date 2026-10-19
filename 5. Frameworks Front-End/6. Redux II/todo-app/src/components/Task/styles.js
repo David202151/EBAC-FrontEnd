@@ -14,6 +14,7 @@ const TaskText = styled.p`
     margin: 0;
     font-size: 1rem;
     text-decoration: ${props => props.completed ? 'line-through' : 'none'};
+    ${props => props.completed ? 'color: #6c757d;' : 'color: #212529;'}
 `;
 
 const RemoveButton = styled.button`
