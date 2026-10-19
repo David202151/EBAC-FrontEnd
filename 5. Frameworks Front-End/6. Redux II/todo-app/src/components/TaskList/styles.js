@@ -1,6 +1,6 @@
-import Styled from "styled-components";
+import styled from "styled-components";
 
-const ListContainer = Styled.article`
+const ListContainer = styled.article`
   display: flex;
   flex-direction: column;
   gap: 0.5rem;

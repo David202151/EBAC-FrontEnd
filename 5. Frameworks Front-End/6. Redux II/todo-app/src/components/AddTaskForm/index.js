@@ -15,18 +15,18 @@ const AddTaskForm = () => {
         if(formTask.trim() === '') return;
         const newTask = {
             id: Date.now(),
-            name: formTask,
+            title: formTask,
             completed: false
         }
         dispatch(addTask(newTask));
-        console.log('Tarea agregada:', newTask.name);
         setFormTask('');
     }
     return (
         <FormContainer onSubmit={handleSubmit}>
                 <Input 
                     type="text" 
-                    placeholder="Enter a new task" 
+                    placeholder="Enter a new task"
+                    aria-label="New task"
                     onChange={handleInputChange} 
                     value={formTask}
                 />

@@ -2,9 +2,10 @@ import styled from "styled-components";
 
 const AppContainer = styled.main`
   width: 100%;
-  max-width: 50%;
+  max-width: 640px;
   margin: 0 auto;
   padding: 2rem;
+  box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
 `;
 
