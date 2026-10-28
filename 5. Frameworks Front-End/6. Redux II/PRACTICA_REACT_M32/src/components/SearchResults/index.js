@@ -3,7 +3,7 @@ import Header from '../Header';
 import SearchBar from '../SearchBar';
 import { ResultsSection, Message, ErrorBox, LibraryLink } from './styles';
 import { useDispatch } from 'react-redux';
-import { addSong } from '../../redux/libraryActions';
+import { addSong } from '../../redux/slices/librarySlice';
 const SearchResults = ({results, onAdd, onSearch, isLoading, error, onRetry, searchTerm}) => {
     const dispatch = useDispatch();
     const handleAdd = (song) => {

@@ -1,10 +1,10 @@
 import Song from "../Song";
 import { LibrarySection, HomeLink } from "./styles";
 import { useSelector, useDispatch } from 'react-redux';
-import { removeSong } from '../../redux/libraryActions';
+import { removeSong } from '../../redux/slices/librarySlice';
 
 const Library = () => {
-    const librarySongs = useSelector((state) => state);
+    const librarySongs = useSelector((state) => state.library);
     const dispatch = useDispatch();
 
     return(
