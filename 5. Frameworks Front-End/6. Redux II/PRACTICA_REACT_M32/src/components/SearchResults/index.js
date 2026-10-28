@@ -2,23 +2,25 @@ import Song from '../Song';
 import Header from '../Header';
 import SearchBar from '../SearchBar';
 import { ResultsSection, Message, ErrorBox, LibraryLink } from './styles';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux'; 
 import { addSong } from '../../redux/slices/librarySlice';
-const SearchResults = ({results, onAdd, onSearch, isLoading, error, onRetry, searchTerm}) => {
+import { fetchSongs } from '../../redux/slices/searchSlice'; 
+const SearchResults = () => {
     const dispatch = useDispatch();
+    const { results, loading, error, term } = useSelector((state) => state.search);
     const handleAdd = (song) => {
         dispatch(addSong(song));
     }
     const renderResults = () => {
-        if (isLoading) return <Message>Cargando...</Message>;
-        if (searchTerm === '')  return <Message>Ingresa el nombre de un artista</Message>;
+        if (loading) return <Message>Cargando...</Message>;
+        if (term === '')  return <Message>Ingresa el nombre de un artista</Message>;
         if (error) return (
                     <ErrorBox $error>
                     <p>Hubo un problema al cargar los datos. Intenta nuevamente.</p>
-                    <button onClick={onRetry}>Reintentar</button>
+                    <button onClick={() => dispatch(fetchSongs(term))}>Reintentar</button>
                     </ErrorBox>
                 );
-        if (results.length === 0) return <Message>No se encontraron álbumes de {searchTerm}.</Message>;
+        if (results.length === 0) return <Message>No se encontraron álbumes de {term}.</Message>;
         return results.map(song => <Song 
                                         key={song.id}
                                         id={song.id}
@@ -32,7 +34,7 @@ const SearchResults = ({results, onAdd, onSearch, isLoading, error, onRetry, sea
     return(
         <article>
             <Header appName="Biblioteca Musical"/>
-            <SearchBar onSearch={onSearch} />
+            <SearchBar/>
             <ResultsSection>
                 <h2>Resultados de la búsqueda</h2>
                 {renderResults()}
