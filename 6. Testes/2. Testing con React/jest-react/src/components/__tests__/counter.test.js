@@ -21,3 +21,6 @@ describe( 'Counter component', () => {
     expect(countElement).toHaveTextContent('Counter: -1');
   });
 }); 
+
+
+// COVERAGE
