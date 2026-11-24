@@ -1,0 +1,6 @@
+# Proyecto Pokedex original: tiene su propio repositorio y se sube por separado.
+# Su copia sin .git esta en "6. Testes/3. Proyecto Pokedex React"
+6. Testes/pokedex-react/
+
+# Dependencias
+node_modules/

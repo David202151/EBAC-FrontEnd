@@ -1,0 +1,8 @@
+@use '../variables' as v;
+
+// Contador "Pokémon en tu equipo: X de 6" (se muestra en Home, sobre la rejilla)
+.team-counter {
+  margin-bottom: v.$space-3;
+  text-align: center;
+  color: v.$color-text-muted;
+}

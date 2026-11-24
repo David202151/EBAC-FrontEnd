@@ -1,0 +1,20 @@
+@use 'sass:map';
+@use '../variables' as v;
+
+// Uso en JSX:  <span className={`type-badge type-badge--${type}`}>{type}</span>
+.type-badge {
+  padding: 2px v.$space-2;
+  border-radius: 999px;
+  background: v.$color-text-muted; // color por defecto si el tipo no existe
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: capitalize;
+
+  // Genera .type-badge--fire, --water, etc. a partir del mapa de colores
+  @each $name, $color in v.$type-colors {
+    &--#{$name} {
+      background: $color;
+    }
+  }
+}

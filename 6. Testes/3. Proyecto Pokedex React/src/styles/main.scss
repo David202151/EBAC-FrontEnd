@@ -1,0 +1,11 @@
+// Punto de entrada de los estilos.
+// En src/index.js importa SOLO este archivo:  import './styles/main.scss';
+@use 'base';
+@use 'layout';
+@use 'components/button';
+@use 'components/pokemon-card';
+@use 'components/type-badge';
+@use 'components/team-counter';
+@use 'components/header';
+@use 'components/detail';
+@use 'components/team';

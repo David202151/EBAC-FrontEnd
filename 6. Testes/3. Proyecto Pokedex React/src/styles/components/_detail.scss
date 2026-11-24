@@ -1,0 +1,130 @@
+@use '../variables' as v;
+@use '../mixins' as m;
+
+// Bloque: .detail  (página /pokemon/:name)
+// Elementos: __back, __name, __card, __image, __types, __stats, __stat,
+//            __label, __value, __abilities, __ability
+// Modificador: __stat--wide
+.detail {
+  max-width: 640px;
+
+  &__back {
+    display: inline-block;
+    margin-bottom: v.$space-3;
+    font-weight: 600;
+    color: v.$color-primary;
+    transition: color v.$transition;
+
+    &:hover,
+    &:focus-visible {
+      color: v.$color-primary-dark;
+      text-decoration: underline;
+    }
+  }
+
+  &__name {
+    margin-bottom: v.$space-4;
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 1.75rem;
+    color: v.$color-secondary;
+
+    @include m.respond-to(md) {
+      font-size: 2.25rem;
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: v.$space-3;
+    padding: v.$space-4;
+    background: v.$color-surface;
+    border-radius: v.$radius;
+    box-shadow: v.$shadow;
+
+    @include m.respond-to(md) {
+      padding: v.$space-5;
+    }
+
+    // El botón de equipo ocupa todo el ancho al final de la tarjeta
+    > .btn {
+      width: 100%;
+    }
+  }
+
+  &__image {
+    width: 160px;
+    height: 160px;
+    object-fit: contain;
+    // Sprites pixel art: evita que se vean borrosos al ampliarlos
+    image-rendering: pixelated;
+
+    @include m.respond-to(md) {
+      width: 220px;
+      height: 220px;
+    }
+  }
+
+  &__types {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: v.$space-2;
+  }
+
+  &__stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: v.$space-3;
+    width: 100%;
+  }
+
+  &__stat {
+    padding: v.$space-3;
+    background: v.$color-bg;
+    border: 1px solid v.$color-border;
+    border-radius: v.$radius;
+    text-align: center;
+
+    &--wide {
+      grid-column: 1 / -1;
+    }
+  }
+
+  &__label {
+    margin-bottom: v.$space-1;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: v.$color-text-muted;
+  }
+
+  &__value {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: v.$color-text;
+  }
+
+  &__abilities {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: v.$space-2;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__ability {
+    padding: v.$space-1 v.$space-3;
+    background: v.$color-surface;
+    border: 1px solid v.$color-border;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: capitalize;
+  }
+}

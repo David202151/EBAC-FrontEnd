@@ -1,0 +1,76 @@
+@use '../variables' as v;
+
+// Bloque: .btn   Modificadores: .btn--primary, .btn--secondary, .btn--outline, .btn--added
+.btn {
+  display: inline-block;      // también sirve para <Link className="btn">
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border: 2px solid transparent;
+  border-radius: v.$radius;
+  padding: v.$space-2 v.$space-3;
+  font-weight: 600;
+  transition: background v.$transition, transform v.$transition;
+
+  &--primary {
+    background: v.$color-primary;
+    color: #fff;
+
+    &:hover:not(:disabled) {
+      background: v.$color-primary-dark;
+    }
+  }
+
+  // Acción secundaria/neutra (p. ej. "Limpiar equipo")
+  &--secondary {
+    background: transparent;
+    border-color: v.$color-secondary;
+    color: v.$color-secondary;
+
+    &:hover:not(:disabled) {
+      background: v.$color-secondary;
+      color: #fff;
+    }
+  }
+
+  &--outline {
+    background: transparent;
+    border-color: v.$color-primary;
+    color: v.$color-primary;
+
+    &:hover:not(:disabled) {
+      background: v.$color-primary;
+      color: #fff;
+    }
+  }
+
+  &:focus-visible {
+    outline: 3px solid rgba(v.$color-primary, 0.4);
+    outline-offset: 2px;
+  }
+
+  &:active:not(:disabled) {
+    transform: scale(0.97);
+  }
+
+  // Cubre el botón "Agregado" y el de equipo lleno
+  &:disabled {
+    background: v.$color-disabled;
+    border-color: v.$color-disabled;
+    color: #fff;
+    cursor: not-allowed;
+  }
+
+  // Estado "ya agregado": se distingue del botón desactivado por equipo lleno
+  &--added {
+    background: #2e9e5b;
+    border-color: #2e9e5b;
+    color: #fff;
+
+    &:disabled {
+      background: #2e9e5b;
+      border-color: #2e9e5b;
+      cursor: default;
+    }
+  }
+}

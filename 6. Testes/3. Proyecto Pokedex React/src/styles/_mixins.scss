@@ -1,0 +1,15 @@
+@use 'sass:map';
+@use 'variables' as v;
+
+// Uso:  @include respond-to(md) { ... }   → aplica desde 768px en adelante
+@mixin respond-to($name) {
+  @media (min-width: map.get(v.$breakpoints, $name)) {
+    @content;
+  }
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

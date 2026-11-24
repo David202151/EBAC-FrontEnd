@@ -1,0 +1,48 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+// Contenedor centrado de las páginas
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: v.$space-3;
+
+  @include m.respond-to(md) {
+    padding: v.$space-4;
+  }
+}
+
+// Rejilla responsiva de tarjetas: 2 → 3 → 4 columnas
+.pokemon-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: v.$space-3;
+
+  @include m.respond-to(md) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include m.respond-to(lg) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+// Título de cada página
+.page-title {
+  margin-bottom: v.$space-4;
+  text-align: center;
+  font-size: 1.75rem;
+  color: v.$color-secondary;
+
+  @include m.respond-to(md) {
+    font-size: 2.25rem;
+  }
+}
+
+// Mensajes de carga / error / lista vacía
+.status-message {
+  padding: v.$space-5 0;
+  text-align: center;
+  color: v.$color-text-muted;
+}
