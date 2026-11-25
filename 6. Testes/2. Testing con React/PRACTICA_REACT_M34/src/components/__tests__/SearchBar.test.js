@@ -79,5 +79,14 @@ describe('SearchBar Component', () => {
             expect(store.getState().search.error).toBe('Ha ocurrido un error al tratar de extraer la informacion');
             expect(store.getState().search.loading).toBe(false);
         });
-    }); 
+    });
+    it('should not search and should reset the results when the query is empty', () => {
+        const store = renderSearchBar();
+        const input = screen.getByRole('textbox');
+        fireEvent.change(input, { target: { value: '   ' } });
+        fireEvent.click(screen.getByRole('button', { name: 'Buscar' }));
+        expect(axios.get).not.toHaveBeenCalled();
+        expect(store.getState().search.term).toBe('');
+        expect(store.getState().search.results).toEqual([]);
+    });
 })

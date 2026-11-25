@@ -15,10 +15,10 @@ const makeStore = (preloadedState) => configureStore({
     preloadedState
 });
 
-const renderWithProviders = (ui, preloadedState) => {
+const renderWithProviders = (ui, preloadedState, route = '/') => {
     const store = makeStore(preloadedState);
     const Wrapper = ({ children }) => (
-        <MemoryRouter>
+        <MemoryRouter initialEntries={[route]}>
             <Provider store={store}>
                 <ThemeProvider theme={Theme}>
                     {children}
@@ -28,6 +28,5 @@ const renderWithProviders = (ui, preloadedState) => {
     );
     return { store, ...render(ui, { wrapper: Wrapper }) };
 }
-
 
 export { makeStore, renderWithProviders };

@@ -1,6 +1,9 @@
 import SearchResults from "../SearchResults";
 import { screen, fireEvent } from '@testing-library/react';
 import { renderWithProviders } from "../../test-utils";
+import axios from 'axios';
+
+jest.mock('axios', () => ({ get: jest.fn() }));
 
 const mockSongs = [
     {
@@ -53,5 +56,22 @@ describe('SearchResults Component', () => {
         const addButtons = screen.getAllByRole('button', { name: 'Agregar a mi biblioteca' });
         fireEvent.click(addButtons[0]);
         expect(store.getState().library).toContainEqual(mockSongs[0]);
-    }); 
+    });
+    it('should not add the same song twice to the library', () => {
+        const store = renderWithProviders(<SearchResults/>, preloadedState).store;
+        const addButtons = screen.getAllByRole('button', { name: 'Agregar a mi biblioteca' });
+        fireEvent.click(addButtons[0]);
+        fireEvent.click(addButtons[0]);
+        expect(store.getState().library).toEqual([mockSongs[0]]);
+    });
+    it('should retry the search when the "Reintentar" button is clicked', async () => {
+        axios.get.mockResolvedValueOnce({ data: { album: [] } });
+        renderWithProviders(<SearchResults/>, {
+            search: { loading: false, error: 'Ha ocurrido un error', term: 'Ado', results: [] }
+        });
+        expect(screen.getByText('Hubo un problema al cargar los datos. Intenta nuevamente.')).toBeInTheDocument();
+        fireEvent.click(screen.getByRole('button', { name: 'Reintentar' }));
+        expect(axios.get).toHaveBeenCalledWith(expect.stringContaining('Ado'));
+        expect(await screen.findByText('No se encontraron álbumes de Ado.')).toBeInTheDocument();
+    });
 })

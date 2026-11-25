@@ -27,7 +27,12 @@
   "jest": {
     "moduleNameMapper": {
       "^react-router/dom$": "<rootDir>/node_modules/react-router/dist/development/dom-export.js"
-    }
+    }, 
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}",
+      "!src/index.js",
+      "!src/test-utils.js"
+    ]
   },
   "eslintConfig": {
     "extends": [
